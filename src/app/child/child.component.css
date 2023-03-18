@@ -1,0 +1,117 @@
+section {
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+/* QUESTION */
+
+.question-box {
+    background-image: url('../../assets/img/Image20230206160940.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    border-radius: 50px;
+    width: 25%;
+    text-align: left;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.question-box img {
+    height: 90px;
+    position: absolute;
+    top: 200px;
+    left: 30px;
+}
+
+.question-box::after {
+    display: table;
+    content: '';
+    clear: both;
+}
+
+.question-box h2 {
+    color: white;
+    width: 80%;
+    height: 20%;
+    font-size: 30px;
+    position: relative;
+    bottom: 20px;
+}
+
+.question-box h3 {
+    color: white;
+    width: 80%;
+    margin: 0px;
+    position: relative;
+    bottom: 20px;
+}
+
+/* ANSWER */
+
+.answers-container {
+    height: 350px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.row {
+    height: calc(100% / 5);
+    background-color: #ec75d7;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    display: flex;
+    align-items: center; 
+    color: white;
+}
+
+.row:hover {
+    border: 10px solid rgb(141, 74, 241);
+    margin-left: -9.6px;
+}
+
+.circle {
+    height: 83px;
+    background-color: white;
+    width: 83px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ec75d7;
+    position: relative;
+    right: 30px;
+}
+
+.circle h1 {
+    font-size: 48px;
+}
+
+button {
+    height: 60px;
+    width: 120px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 15px;
+    margin-left: 20px;
+    background-color: #fff;
+    border-color: lightgray;
+}
+
+button:hover {
+    border: 2px solid black;
+}
+
+.message {
+    text-align: center;
+    position: relative;
+    bottom: 60px;
+    font-weight: bold;
+}

@@ -1,0 +1,37 @@
+<section>
+
+    <!--Question Box-->
+    <div class="question-box">
+        <img src="../../assets/img/Image20230206160927.png" alt="">
+        <h3>{{ 'Question number '+(currentIndex + 1)}}</h3>
+        <h2>{{question[currentIndex].q}}</h2>
+    </div>
+
+    <!--Answers-->
+    <div class="answers-container">
+        <div [style.pointer-events]="disabledDiv" [style.background-color]=" answer ? (question[currentIndex].a[0].correct ? 'green' : 'red') : '' " class="row" (click)="checkAnswer(0)">
+            <div class="circle"><h1>a</h1></div>
+            <h2>{{question[currentIndex].a[0].option}}</h2>
+        </div>
+        <div [style.pointer-events]="disabledDiv" [style.background-color]=" answer ? (question[currentIndex].a[1].correct ? 'green' : 'red') : '' " class="row" (click)="checkAnswer(1)">
+            <div class="circle"><h1>b</h1></div>
+            <h2>{{question[currentIndex].a[1].option}}</h2>
+        </div>
+        <div [style.pointer-events]="disabledDiv" [style.background-color]=" answer ? (question[currentIndex].a[2].correct ? 'green' : 'red') : '' " class="row" (click)="checkAnswer(2)">
+            <div class="circle"><h1>c</h1></div>
+            <h2>{{question[currentIndex].a[2].option}}</h2>
+        </div>
+        <div [style.pointer-events]="disabledDiv" [style.background-color]=" answer ? (question[currentIndex].a[3].correct ? 'green' : 'red') : '' " class="row" (click)="checkAnswer(3)">
+            <div class="circle"><h1>d</h1></div>
+            <h2>{{question[currentIndex].a[3].option}}</h2>
+        </div>
+    </div>
+    
+    <!--Next Question-->
+    <button [disabled]="isDisabled" (click)="nextQuestion()">Next Question</button>
+
+</section>
+
+<!--Message-->
+<div class="message" [innerHTML]="message"></div>
+
